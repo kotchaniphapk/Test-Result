@@ -81,19 +81,49 @@
 
 	<input type="button" class="btn btn-primary" value="Save" id="saveBtn"><br/><br/>
 
-	<h2>Database table for permissions</h2>
-
+<!--	<h2>Database table for permissions</h2>
+	<p1><strong>Id</strong>- unique key<br></p1>
+	<p2><strong>user_Id</strong>-referent-User<br></p2>
+	<p3><strong>role_name</strong> -string/json<br></p3>
+	<p4><strong>permissions</strong> -string/json<br>
+	default :<br>
+		{
+  	“order”: [“”],<br>
+  	“accounting”: [“”],<br>
+  	“user”: [“”],<br>
+  	“setting”: [“”, “”],<br>
+	}
+	</p4>	-->
 	<table class="table">
 		<thead>
 			<tr>
-				<td>Column1</td> <!-- Create your own column name -->
-				<td>Column2</td> <!-- Create your own column name -->
-			</tr>
+				<th>Id</th> 
+				<th>user_Id</th>
+				<th>role_name</th>
+				<th>permission</th>
 		</thead>
 		<tbody>
 			<tr>
-				<td>data1</td> <!-- Create your own data -->
-				<td>data2</td> <!-- Create your own data -->
+				<td>1</td> 
+				<td>21</td>
+				<td>Sales</td>
+				<td> {
+					“order”: [“fullcheck”],<br>
+					“accounting”: [“add”],<br>
+					“user”: [“edit”],<br>
+					“setting”: [“exportP”],<br>
+					}</td>
+			</tr>
+			<tr>
+				<td>2</td> 
+				<td>21</td>
+				<td>Accountant</td>
+				<td> {
+					“order”: ["exportE"],<br>
+					“accounting”: [],<br>
+					“user”: [],<br>
+					“setting”: [],<br>
+					}</td>
 			</tr>
 		</tbody>
 	</table>
@@ -151,9 +181,9 @@
 			else { 
 				$("#fullcheck-"+roleId + "-" + menuId).prop("checked",false)
 			}
-			
+
 			if (checked) {
-				$("#view-"+roleId + "-" + menuId).prop("checked", true)
+				$("#view-"+roleId + "-" + menuId).prop("checked", true) 
 			}
 
 		}
@@ -287,5 +317,11 @@ var permissions = {
 			var jsonData = "";
 			console.log(jsonData);
 		});
+
+
+
+
+
+
 
 </script>

@@ -16,14 +16,14 @@
 		['menu_id' => 3, 'menu_name' => 'User'], 
 		['menu_id' => 4, 'menu_name' => 'Setting'], 
 	];
-
+	
 	$permissionList = [
 		['permission_id' => 1, 'permission_name' => 'Full Control'], 
 		['permission_id' => 2, 'permission_name' => 'View'], 
 		['permission_id' => 3, 'permission_name' => 'Add'], 
 		['permission_id' => 4, 'permission_name' => 'Edit'], 
 		['permission_id' => 5, 'permission_name' => 'Export PDF'], 
-		['permission_id' => 6, 'permission_name' => 'Export Excel']
+		['permission_id' => 6, 'permission_name' => 'Export Excel'],
 	];
 
 	$mockupData = null; // you will need to assign values to this variable according to your database table design.
